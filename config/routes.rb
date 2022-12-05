@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   get "/first_route", controller: "predictions", action: "first"
+
+  get "/lottery", controller: "predictions", action: "lotto"
 end

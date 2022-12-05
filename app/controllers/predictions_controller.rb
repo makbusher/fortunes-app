@@ -5,11 +5,18 @@ class PredictionsController < ApplicationController
       "You will be successful in your career",
       "You will receive a large amount of money"
     ]
-    x = rand(0..2)
-  
-    render json: {message: }
+    render json: {fortune: fortunes.sample}
   end
-  #  def second
-  #   render json: {message: }
-  # end
+
+  def lotto
+    lotto_numbers = []
+    6.times do
+      number = rand(1..60)
+      lotto_numbers << number
+    end
+  render json: {lotto: lotto_numbers}
+  end
+
+
+  
 end
